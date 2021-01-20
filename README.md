@@ -61,9 +61,9 @@ IntelliJ IDEA or Android Studio -> Preferences -> Plugins -> TreeInfotip
 4. 属性说明
 
 ```xml：
-    // 相对路径
-    <path/> 
+  // 相对路径
+  <path/> 
 
-    // 显示备注
-    <title/> 
+  // 显示备注
+  <title/> 
 ```
