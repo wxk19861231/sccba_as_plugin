@@ -4,13 +4,11 @@
 
 > TreeInfoTip是基于IntelliJ 开发的项目目录自定义备注显示，主要通过自定义XML来生成项目目录树备注。
 
-
 ### 为什么要这个插件
 
 > 1、便于项目管理。
 
 > 2、便于源码阅读。
-
 
 ### 使用环境
 
@@ -20,24 +18,26 @@
 
 ### 在线安装(搜索)
 
- IntelliJ IDEA or Android Studio -> Preferences -> Plugins -> TreeInfotip
- 
+IntelliJ IDEA or Android Studio -> Preferences -> Plugins -> TreeInfotip
+
 ### 手动安装
 
- [TreeInfoTip-1.0.0.zip](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/builds/TreeInfoTip-1.0.0.zip)
- 
+[TreeInfoTip-1.0.0.zip](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/builds/TreeInfoTip-1.0.0.zip)
+
 ### 一、示列
+
 > ##### 图片示列教程：
 
 
- ![样列](https://raw.githubusercontent.com/Link-Kou/intellij-treeInfotip/master/image/2020-03-18_16-46-20.gif "样列")
- 
+![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/2020-03-18_16-46-20.gif "样列")
+
 
 > ##### 说明文档：
 
 1. 在项目根目录下自动创建directory.xml文件
 
 2. 文件内容示列
+
 ```xml：
   <?xml version="1.0" encoding="UTF-8"?>
   <trees>
@@ -46,6 +46,7 @@
 ```
 
 3. 标签说明
+
 ```xml：
   // 根节点
   <trees></tress>：只能有一个，所有子标签都在此标签里面
@@ -58,6 +59,7 @@
 ```
 
 4. 属性说明
+
 ```xml：
     // 相对路径
     <path/> 
