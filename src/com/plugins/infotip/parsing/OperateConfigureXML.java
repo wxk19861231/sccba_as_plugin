@@ -28,8 +28,8 @@ public class OperateConfigureXML {
         if (project == null) {
             return;
         }
-        String presentableUrl = project.getPresentableUrl();
-        if (presentableUrl == null && presentableUrl.length() == 0) {
+        String basePath = project.getBasePath();
+        if (basePath == null && basePath.length() == 0) {
             return;
         }
         PsiFile[] pfs = FilenameIndex.getFilesByName(project, filename, GlobalSearchScope.allScope(project));
@@ -39,7 +39,7 @@ public class OperateConfigureXML {
                 XmlDocument document = xf.getDocument();
                 if (document != null && document.getRootTag() != null) {
                     XmlTag parentTag = document.getRootTag();
-                    String relativePath = path.replace(presentableUrl, "");
+                    String relativePath = path.replace(basePath, "");
                     XmlTag currentTag = findXmlTagByPath(parentTag, relativePath);
                     if (currentTag != null) {
                         updateXmlTag(currentTag, title);

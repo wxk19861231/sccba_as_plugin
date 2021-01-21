@@ -8,7 +8,6 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.plugins.infotip.parsing.model.ProjectInfo;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 

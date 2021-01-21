@@ -1,6 +1,7 @@
 package com.plugins.infotip.parsing.model;
 
 import com.intellij.openapi.command.WriteCommandAction;
+import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiFile;
@@ -17,6 +18,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class ProjectInfo {
 
     public static final String DIRECTORY = "directory.xml";
+
+    // 获取日志实例
+    public static final Logger logger = Logger.getInstance(ProjectInfo.class);
 
     // 解析XML存储的对象
     public static List<ListTreeInfo> listTreeInfos = new CopyOnWriteArrayList<>();
@@ -35,13 +39,13 @@ public class ProjectInfo {
                     VirtualFile vf = dir.createChildData(project, DIRECTORY);
                     String language = "<?xml version='1.0' encoding='UTF-8'?>" + System.getProperty("line.separator") + "<trees></trees>";
                     vf.setBinaryContent(language.getBytes(StandardCharsets.UTF_8));
-                    System.out.println("create directory.xml success.");
+                    ProjectInfo.logger.info("TreeInfoTip: create directory.xml success.");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             });
         } else {
-            System.out.println("directory.xml is exist.");
+            ProjectInfo.logger.info("TreeInfoTip: directory.xml is exist.");
         }
     }
 
