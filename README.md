@@ -29,8 +29,10 @@ IntelliJ IDEA or Android Studio -> Preferences -> Plugins -> TreeInfoTip
 > ##### 图片示列教程：
 
 
-![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_1.gif "样列")
-
+![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_1.png "样列")
+![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_2.png "样列")
+![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_3.png "样列")
+![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_4.png "样列")
 
 > ##### 说明文档：
 
