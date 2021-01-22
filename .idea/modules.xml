@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/treeInfotip.iml" filepath="$PROJECT_DIR$/treeInfotip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sccba_as_plugin.iml" filepath="$PROJECT_DIR$/sccba_as_plugin.iml" />
     </modules>
   </component>
 </project>

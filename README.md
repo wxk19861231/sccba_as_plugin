@@ -1,8 +1,8 @@
-# TreeInfoTip
+# sccba_as_plugin
 
-### TreeInfoTip能做什么？
+### sccba_as_plugin能做什么？
 
-> TreeInfoTip是基于IntelliJ 开发的项目目录自定义备注显示，主要通过自定义XML来生成项目目录树备注。
+> sccba_as_plugin是基于IntelliJ 开发的项目目录自定义备注显示，主要通过自定义XML来生成项目目录树备注。
 
 ### 为什么要这个插件
 
@@ -18,21 +18,21 @@
 
 ### 在线安装(搜索)
 
-IntelliJ IDEA or Android Studio -> Preferences -> Plugins -> TreeInfoTip
+IntelliJ IDEA or Android Studio -> Plugins -> sccba_as_plugin
 
 ### 手动安装
 
-[TreeInfoTip-1.0.0.zip](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/builds/TreeInfoTip-1.0.0.zip)
+[sccba_as_plugin-1.0.0.zip](https://raw.githubusercontent.com/wxk19861231/sccba_as_plugin/master/builds/sccba_as_plugin-1.0.0.zip)
 
 ### 一、示列
 
 > ##### 图片示列教程：
 
 
-![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_1.png "样列")
-![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_2.png "样列")
-![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_3.png "样列")
-![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_4.png "样列")
+![样列](https://raw.githubusercontent.com/wxk19861231/sccba_as_plugin/master/image/show_1.png "样列")
+![样列](https://raw.githubusercontent.com/wxk19861231/sccba_as_plugin/master/image/show_2.png "样列")
+![样列](https://raw.githubusercontent.com/wxk19861231/sccba_as_plugin/master/image/show_3.png "样列")
+![样列](https://raw.githubusercontent.com/wxk19861231/sccba_as_plugin/master/image/show_4.png "样列")
 
 > ##### 说明文档：
 

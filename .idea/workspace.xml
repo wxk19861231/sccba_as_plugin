@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa7cb5d5-ec40-40a1-a56e-9719aad7b17c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/META-INF/plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/AddRemarkAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/IgnoreViewNodeDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/PluginStartupActivity$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/PluginStartupActivity$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/PluginStartupActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/TreeOnlyTextProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/parsing/OperateConfigureXML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/parsing/ParsingConfigureXML$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/parsing/ParsingConfigureXML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/parsing/model/ListTreeInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/parsing/model/ProjectInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treeInfotip.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sccba_as_plugin.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Action" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1n2dBjW85oT7V2brII3NyeufxLb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\treeInfotip" />
+      <recent name="D:\WorkSpace\treeInfotip\src" />
+      <recent name="D:\WorkSpace\treeInfotip\image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\sccba_as_plugin" />
+      <recent name="D:\WorkSpace\treeInfotip\image" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.plugins.infotip.parsing" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" show_console_on_std_err="true" show_console_on_std_out="true">
+      <module name="sccba_as_plugin" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -ea" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="sccba_as_plugin" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa7cb5d5-ec40-40a1-a56e-9719aad7b17c" name="Default Changelist" comment="" />
+      <created>1610591986171</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610591986171</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

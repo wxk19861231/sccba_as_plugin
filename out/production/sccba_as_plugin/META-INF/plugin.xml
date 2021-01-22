@@ -1,8 +1,8 @@
 <idea-plugin>
-    <id>com.sccba.plugin.assistant</id>
-    <name>TreeInfoTip</name>
+    <id>com.sccba.asplugin</id>
+    <name>sccba_as_plugin</name>
     <version>1.0.0</version>
-    <vendor email="xxx@gmail.com" url="https://github.com/wxk19861231/TreeInfoTip">SCCBA</vendor>
+    <vendor email="xxx@gmail.com" url="https://github.com/wxk19861231/sccba_as_plugin">SCCBA</vendor>
 
     <description><![CDATA[
       <ul>
@@ -12,10 +12,10 @@
         <li>项目目录树添加备注信息</li>
       </ul>
       <br/>
-      <p><img src="https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_1.png" width="500" height="480" alt="screenshots-balloon.png"/></p>
-      <p><img src="https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_2.png" width="500" height="480" alt="screenshots-balloon.png"/></p>
-      <p><img src="https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_3.png" width="500" height="480" alt="screenshots-balloon.png"/></p>
-      <p><img src="https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_4.png" width="500" height="480" alt="screenshots-balloon.png"/></p>
+      <p><img src="https://raw.githubusercontent.com/wxk19861231/sccba_as_plugin/master/image/show_1.png" width="500" height="480" alt="screenshots-balloon.png"/></p>
+      <p><img src="https://raw.githubusercontent.com/wxk19861231/sccba_as_plugin/master/image/show_2.png" width="500" height="480" alt="screenshots-balloon.png"/></p>
+      <p><img src="https://raw.githubusercontent.com/wxk19861231/sccba_as_plugin/master/image/show_3.png" width="500" height="480" alt="screenshots-balloon.png"/></p>
+      <p><img src="https://raw.githubusercontent.com/wxk19861231/sccba_as_plugin/master/image/show_4.png" width="500" height="480" alt="screenshots-balloon.png"/></p>
       <br/>
     ]]></description>
 
