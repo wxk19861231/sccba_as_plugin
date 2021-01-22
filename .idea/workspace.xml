@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa7cb5d5-ec40-40a1-a56e-9719aad7b17c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +52,8 @@
       <recent name="D:\WorkSpace\treeInfotip\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WorkSpace\sccba_as_plugin" />
       <recent name="D:\WorkSpace\sccba_as_plugin\.idea" />
+      <recent name="D:\WorkSpace\sccba_as_plugin" />
       <recent name="D:\WorkSpace\treeInfotip\image" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
