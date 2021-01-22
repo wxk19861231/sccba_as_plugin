@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa7cb5d5-ec40-40a1-a56e-9719aad7b17c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/META-INF/plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/AddRemarkAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/IgnoreViewNodeDecorator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/PluginStartupActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/PluginStartupActivity$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/PluginStartupActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/TreeOnlyTextProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/parsing/OperateConfigureXML.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/parsing/ParsingConfigureXML$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/parsing/ParsingConfigureXML.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/parsing/model/ListTreeInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/treeInfotip/com/plugins/infotip/parsing/model/ProjectInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treeInfotip.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sccba_as_plugin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
