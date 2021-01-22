@@ -14,10 +14,11 @@ import java.io.IOException;
 public class AddRemarkAction extends AnAction {
 
     private VirtualFile file;
+    private Project project;
 
     @Override
     public void actionPerformed(AnActionEvent e) {
-        Project project = e.getData(CommonDataKeys.PROJECT);
+        project = e.getData(CommonDataKeys.PROJECT);
         file = CommonDataKeys.VIRTUAL_FILE.getData(e.getDataContext());
 
         if (file != null) {
@@ -27,9 +28,8 @@ public class AddRemarkAction extends AnAction {
                     Messages.getQuestionIcon()
             );
             if (title != null) {
-                String path = file.getPath();
                 try {
-                    ProjectInfo.getOperateConfigureXML(project, title, path);
+                    ProjectInfo.getOperateConfigureXML(project, title, file.getPath());
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
@@ -39,8 +39,9 @@ public class AddRemarkAction extends AnAction {
 
     @Override
     public void update(AnActionEvent e) {
+        project = e.getData(CommonDataKeys.PROJECT);
         file = CommonDataKeys.VIRTUAL_FILE.getData(e.getDataContext());
-        e.getPresentation().setEnabledAndVisible(file != null && file.isDirectory());
+        e.getPresentation().setEnabledAndVisible(project != null && file != null && file.isDirectory());
         e.getPresentation().setIcon(AllIcons.General.Add);
     }
 }

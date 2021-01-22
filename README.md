@@ -18,7 +18,7 @@
 
 ### 在线安装(搜索)
 
-IntelliJ IDEA or Android Studio -> Preferences -> Plugins -> TreeInfotip
+IntelliJ IDEA or Android Studio -> Preferences -> Plugins -> TreeInfoTip
 
 ### 手动安装
 
@@ -29,7 +29,7 @@ IntelliJ IDEA or Android Studio -> Preferences -> Plugins -> TreeInfotip
 > ##### 图片示列教程：
 
 
-![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/2020-03-18_16-46-20.gif "样列")
+![样列](https://raw.githubusercontent.com/wxk19861231/TreeInfoTip/master/image/show_1.gif "样列")
 
 
 > ##### 说明文档：
