@@ -2,7 +2,7 @@
 
 ### sccba_as_plugin能做什么？
 
-> sccba_as_plugin是基于IntelliJ 开发的项目目录自定义备注显示，主要通过自定义XML来生成项目目录树备注。
+> sccba_as_plugin是基于IntelliJ 开发的项目树自定义备注显示，主要通过自定义XML来生成项目树备注。
 
 ### 为什么要这个插件
 
@@ -36,7 +36,12 @@ IntelliJ IDEA or Android Studio -> Plugins -> sccba_as_plugin
 
 > ##### 说明文档：
 
-1. 在项目根目录下自动创建directory.xml文件
+1. 在项目根目录下手动创建directory.xml文件
+
+```xml：
+  <?xml version="1.0" encoding="UTF-8"?>
+  <trees></trees>
+```
 
 2. 文件内容示列
 
@@ -56,8 +61,8 @@ IntelliJ IDEA or Android Studio -> Plugins -> sccba_as_plugin
   // 子模块 （待开发）
   <model/>：Maven多模块可以采用此标签作为标识
 
-  // 子目录
-  <tree/>：普通文件夹
+  // 目录或文件
+  <tree/>：目录或文件
 ```
 
 4. 属性说明
