@@ -1,4 +1,4 @@
-package com.plugins.infotip.parsing.model;
+package com.sccba.asplugin.model;
 
 import java.io.File;
 
@@ -7,39 +7,25 @@ import java.io.File;
  */
 public class ListTreeInfo {
 
-    /**
-     * 当前目录地址
-     */
+    // 节点路径
     private String path;
 
-    /**
-     * 配置文件
-     */
+    // 节点属性
     private String properties;
 
-    /**
-     * 目录树显示
-     */
+    // 节点注解
     private String title;
 
-    /**
-     * 提示内容显示
-     */
+    // 节点提示
     private String tooltip;
 
-    /**
-     * code 名称约束
-     */
+    // 名称约束
     private String code;
 
-    /**
-     * code 值约束
-     */
-    private String codeval;
+    // 数值约束
+    private String codeValue;
 
-    /**
-     * msg约束
-     */
+    // 消息约束
     private String msg;
 
     public String getPath() {
@@ -92,12 +78,12 @@ public class ListTreeInfo {
         return this;
     }
 
-    public String getCodeval() {
-        return codeval;
+    public String getCodeValue() {
+        return codeValue;
     }
 
-    public ListTreeInfo setCodeval(String codeval) {
-        this.codeval = codeval;
+    public ListTreeInfo setCodeValue(String codeValue) {
+        this.codeValue = codeValue;
         return this;
     }
 

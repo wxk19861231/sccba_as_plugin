@@ -37,9 +37,9 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <postStartupActivity implementation="com.plugins.infotip.PluginStartupActivity"/>
-        <treeStructureProvider implementation="com.plugins.infotip.TreeOnlyTextProvider"/>
-        <projectViewNodeDecorator implementation="com.plugins.infotip.IgnoreViewNodeDecorator"/>
+        <postStartupActivity implementation="com.sccba.asplugin.extension.PluginStartupActivity"/>
+        <treeStructureProvider implementation="com.sccba.asplugin.extension.TreeOnlyTextProvider"/>
+        <projectViewNodeDecorator implementation="com.sccba.asplugin.extension.IgnoreViewNodeDecorator"/>
     </extensions>
 
     <actions>
@@ -47,7 +47,7 @@
         <!-- <group id="xxx" text="xxx" popup="true">
             <add-to-group group-id="xxx" anchor="first"/>
         </group>-->
-        <action id="PopUp.AddRemarkAction" class="com.plugins.infotip.AddRemarkAction" text="Add Remark"
+        <action id="PopUp.AddRemarkAction" class="com.sccba.asplugin.action.AddRemarkAction" text="Add Remark"
                 description="Add remark">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="ReplaceInPath"/>
             <keyboard-shortcut keymap="$default" first-keystroke="alt R"/>
