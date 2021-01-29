@@ -56,6 +56,22 @@ public class OperateXmlUtil {
     }
 
     /**
+     * 获取根XmlTag
+     *
+     * @param xf Xml文件
+     * @return XmlTag
+     */
+    public static XmlTag getXmlRootTag(XmlFile xf) {
+        if (xf != null) {
+            XmlDocument xd = xf.getDocument();
+            if (xd != null && xd.getRootTag() != null) {
+                return xd.getRootTag();
+            }
+        }
+        return null;
+    }
+
+    /**
      * 根据路径查找XmlTag
      *
      * @param parentXmlTag 父Xml标签

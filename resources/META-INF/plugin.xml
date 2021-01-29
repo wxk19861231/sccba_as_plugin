@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.sccba.asplugin</id>
     <name>sccba_as_plugin</name>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <vendor email="xxx@gmail.com" url="https://github.com/wxk19861231/sccba_as_plugin">SCCBA</vendor>
 
     <description><![CDATA[
@@ -21,7 +21,7 @@
 
     <change-notes><![CDATA[
       <ul>
-        <p>1.0.0</p>
+        <p>1.1.0</p>
         <li> 1.通过配置XML文件来描述项目树树备注信息 </li>
         <li> 1.Describes the project tree remark information by configuring the XML file </li>
       </ul>

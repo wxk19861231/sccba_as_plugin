@@ -5,7 +5,6 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.startup.StartupActivity;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.*;
-import com.intellij.psi.xml.XmlDocument;
 import com.intellij.psi.xml.XmlFile;
 import com.intellij.psi.xml.XmlTag;
 import com.sccba.asplugin.model.Global;
@@ -49,23 +48,26 @@ public class PluginStartupActivity implements StartupActivity {
                      */
                     @Override
                     public void beforeChildRemoval(@NotNull PsiTreeChangeEvent psiTreeChangeEvent) {
-//                        System.out.println("移除");
+                        System.out.println("移除");
+                        VirtualFile vFile;
                         PsiElement childElement = psiTreeChangeEvent.getChild();
-                        PsiFile pFile = childElement.getContainingFile();
-                        VirtualFile vFile = pFile.getVirtualFile();
-                        String path = vFile.getPath().replace("\\", "/");
+                        if (childElement instanceof PsiDirectory) {
+                            PsiDirectory pd = (PsiDirectory) childElement;
+                            vFile = pd.getVirtualFile();
+                        } else {
+                            PsiFile pFile = childElement.getContainingFile();
+                            vFile = pFile.getVirtualFile();
+                        }
+                        String path = vFile.getPath();
                         XmlFile xf = OperateXmlUtil.getXmlFile(project);
-                        if (xf != null) {
-                            XmlDocument xd = xf.getDocument();
-                            if (xd != null && xd.getRootTag() != null) {
-                                XmlTag parentTag = xd.getRootTag();
-                                String relativePath = path.replace(Global.PROJECT_PATH, "");
-                                XmlTag currentTag = OperateXmlUtil.findXmlTagByPath(parentTag, relativePath);
-                                if (currentTag != null) {
-                                    PsiThreadUtil pt = new PsiThreadUtil(project, "delete", currentTag);
-                                    Thread t1 = new Thread(pt);
-                                    t1.start();
-                                }
+                        XmlTag parentTag = OperateXmlUtil.getXmlRootTag(xf);
+                        if (parentTag != null) {
+                            String relativePath = path.replace(Global.PROJECT_PATH, "");
+                            XmlTag currentTag = OperateXmlUtil.findXmlTagByPath(parentTag, relativePath);
+                            if (currentTag != null) {
+                                PsiThreadUtil pt = new PsiThreadUtil(project, "delete", currentTag);
+                                Thread t1 = new Thread(pt);
+                                t1.start();
                             }
                         }
                     }
@@ -87,12 +89,20 @@ public class PluginStartupActivity implements StartupActivity {
                      */
                     @Override
                     public void beforeChildMovement(@NotNull PsiTreeChangeEvent psiTreeChangeEvent) {
-//                        System.out.println("移动");
+                        System.out.println("移动");
+                        String name;
                         PsiElement childElement = psiTreeChangeEvent.getChild();
                         PsiElement oldParentElement = psiTreeChangeEvent.getOldParent();
                         PsiElement newParentElement = psiTreeChangeEvent.getNewParent();
                         if (oldParentElement instanceof PsiDirectory && newParentElement instanceof PsiDirectory) {
-                            String name = childElement.getContainingFile().getName();
+                            if (childElement instanceof PsiDirectory) {
+                                PsiDirectory pd = (PsiDirectory) childElement;
+                                VirtualFile vFile = pd.getVirtualFile();
+                                String[] tempArray = vFile.getPath().split("/");
+                                name = tempArray[tempArray.length - 1];
+                            } else {
+                                name = childElement.getContainingFile().getName();
+                            }
                             PsiDirectory oldDir = (PsiDirectory) oldParentElement;
                             VirtualFile oldFile = oldDir.getVirtualFile();
                             String oldParentPath = oldFile.getPath() + "/" + name;
@@ -100,18 +110,15 @@ public class PluginStartupActivity implements StartupActivity {
                             VirtualFile newFile = newDir.getVirtualFile();
                             String newParentPath = newFile.getPath() + "/" + name;
                             XmlFile xf = OperateXmlUtil.getXmlFile(project);
-                            if (xf != null) {
-                                XmlDocument xd = xf.getDocument();
-                                if (xd != null && xd.getRootTag() != null) {
-                                    XmlTag parentTag = xd.getRootTag();
-                                    String oldRelativePath = oldParentPath.replace(Global.PROJECT_PATH, "");
-                                    XmlTag currentTag = OperateXmlUtil.findXmlTagByPath(parentTag, oldRelativePath);
-                                    if (currentTag != null) {
-                                        String newRelativePath = newParentPath.replace(Global.PROJECT_PATH, "");
-                                        PsiThreadUtil pt = new PsiThreadUtil(project, "update", currentTag, newRelativePath);
-                                        Thread t1 = new Thread(pt);
-                                        t1.start();
-                                    }
+                            XmlTag parentTag = OperateXmlUtil.getXmlRootTag(xf);
+                            if (parentTag != null) {
+                                String oldRelativePath = oldParentPath.replace(Global.PROJECT_PATH, "");
+                                XmlTag currentTag = OperateXmlUtil.findXmlTagByPath(parentTag, oldRelativePath);
+                                if (currentTag != null) {
+                                    String newRelativePath = newParentPath.replace(Global.PROJECT_PATH, "");
+                                    PsiThreadUtil pt = new PsiThreadUtil(project, "update", currentTag, newRelativePath);
+                                    Thread t1 = new Thread(pt);
+                                    t1.start();
                                 }
                             }
                         }
@@ -143,29 +150,26 @@ public class PluginStartupActivity implements StartupActivity {
                      */
                     @Override
                     public void beforePropertyChange(@NotNull PsiTreeChangeEvent psiTreeChangeEvent) {
-//                        System.out.println("属性更改");
+                        System.out.println("属性更改");
                         String propertyName = psiTreeChangeEvent.getPropertyName();
-                        if (propertyName.equals("fileName")) {
+                        if (propertyName.equals("fileName") || propertyName.equals("directoryName")) {
                             PsiElement parentElement = psiTreeChangeEvent.getParent();
                             if (parentElement instanceof PsiDirectory) {
                                 PsiDirectory pd = (PsiDirectory) parentElement;
                                 VirtualFile vFile = pd.getVirtualFile();
                                 String parentPath = vFile.getPath();
                                 XmlFile xf = OperateXmlUtil.getXmlFile(project);
-                                if (xf != null) {
-                                    XmlDocument xd = xf.getDocument();
-                                    if (xd != null && xd.getRootTag() != null) {
-                                        String oldValue = psiTreeChangeEvent.getOldValue().toString();
-                                        String newValue = psiTreeChangeEvent.getNewValue().toString();
-                                        XmlTag parentTag = xd.getRootTag();
-                                        String oldRelativePath = parentPath.replace(Global.PROJECT_PATH, "") + "/" + oldValue;
-                                        XmlTag currentTag = OperateXmlUtil.findXmlTagByPath(parentTag, oldRelativePath);
-                                        if (currentTag != null) {
-                                            String newRelativePath = parentPath.replace(Global.PROJECT_PATH, "") + "/" + newValue;
-                                            PsiThreadUtil pt = new PsiThreadUtil(project, "update", currentTag, newRelativePath);
-                                            Thread t1 = new Thread(pt);
-                                            t1.start();
-                                        }
+                                XmlTag parentTag = OperateXmlUtil.getXmlRootTag(xf);
+                                if (parentTag != null) {
+                                    String oldValue = psiTreeChangeEvent.getOldValue().toString();
+                                    String newValue = psiTreeChangeEvent.getNewValue().toString();
+                                    String oldRelativePath = parentPath.replace(Global.PROJECT_PATH, "") + "/" + oldValue;
+                                    XmlTag currentTag = OperateXmlUtil.findXmlTagByPath(parentTag, oldRelativePath);
+                                    if (currentTag != null) {
+                                        String newRelativePath = parentPath.replace(Global.PROJECT_PATH, "") + "/" + newValue;
+                                        PsiThreadUtil pt = new PsiThreadUtil(project, "update", currentTag, newRelativePath);
+                                        Thread t1 = new Thread(pt);
+                                        t1.start();
                                     }
                                 }
                             }
