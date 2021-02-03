@@ -32,6 +32,10 @@
          on how to target different products -->
     <!-- <depends>com.intellij.modules.platform</depends>-->
     <depends>com.intellij.modules.java</depends>
+    <depends>org.intellij.groovy</depends>
+    <depends>com.intellij.properties</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>org.jetbrains.android</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->

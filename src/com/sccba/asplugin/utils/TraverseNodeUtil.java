@@ -7,7 +7,6 @@ import com.intellij.ide.util.treeView.AbstractTreeNode;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.sccba.asplugin.model.Global;
 import com.sccba.asplugin.model.ListTreeInfo;
-import kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinClassFinder;
 
 import java.util.List;
 
