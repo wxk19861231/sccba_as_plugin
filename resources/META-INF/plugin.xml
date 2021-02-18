@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.sccba.asplugin</id>
     <name>sccba_as_plugin</name>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <vendor email="xxx@gmail.com" url="https://github.com/wxk19861231/sccba_as_plugin">SCCBA</vendor>
 
     <description><![CDATA[
@@ -16,12 +16,8 @@
 
     <change-notes><![CDATA[
       <ul>
-        <p>1.1.1</p>
-        <li> 1.添加插件主题 </li>
-        <li> 1.Add plugin theme </li>
-        <br/>
-        <li> 2.添加插件Logo</li>
-        <li> 2.Add plugin logo </li>
+        <p>1.1.2</p>
+        <li> 1.修改Android Studio IDE多开添加备注信息不显示问题 </li>
       </ul>
     ]]></change-notes>
 

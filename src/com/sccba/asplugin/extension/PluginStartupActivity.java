@@ -23,7 +23,8 @@ public class PluginStartupActivity implements StartupActivity {
     @Override
     public void runActivity(@NotNull Project project) {
 
-        Global.PROJECT_PATH = project.getBasePath();
+        // Global.PROJECT_PATH = project.getBasePath().replace("\\", "/");
+        // Global.logger.info("project path:" + Global.PROJECT_PATH);
         OperateXmlUtil.ParseXmlFile(project);
 
         // 监控文件变化
@@ -62,7 +63,8 @@ public class PluginStartupActivity implements StartupActivity {
                         XmlFile xf = OperateXmlUtil.getXmlFile(project);
                         XmlTag parentTag = OperateXmlUtil.getXmlRootTag(xf);
                         if (parentTag != null) {
-                            String relativePath = path.replace(Global.PROJECT_PATH, "");
+                            String projectPath = project.getBasePath().replace("\\", "/");
+                            String relativePath = path.replace(projectPath, "");
                             XmlTag currentTag = OperateXmlUtil.findXmlTagByPath(parentTag, relativePath);
                             if (currentTag != null) {
                                 PsiThreadUtil pt = new PsiThreadUtil(project, "delete", currentTag);
@@ -112,10 +114,11 @@ public class PluginStartupActivity implements StartupActivity {
                             XmlFile xf = OperateXmlUtil.getXmlFile(project);
                             XmlTag parentTag = OperateXmlUtil.getXmlRootTag(xf);
                             if (parentTag != null) {
-                                String oldRelativePath = oldParentPath.replace(Global.PROJECT_PATH, "");
+                                String projectPath = project.getBasePath().replace("\\", "/");
+                                String oldRelativePath = oldParentPath.replace(projectPath, "");
                                 XmlTag currentTag = OperateXmlUtil.findXmlTagByPath(parentTag, oldRelativePath);
                                 if (currentTag != null) {
-                                    String newRelativePath = newParentPath.replace(Global.PROJECT_PATH, "");
+                                    String newRelativePath = newParentPath.replace(projectPath, "");
                                     PsiThreadUtil pt = new PsiThreadUtil(project, "update", currentTag, newRelativePath);
                                     Thread t1 = new Thread(pt);
                                     t1.start();
@@ -163,10 +166,11 @@ public class PluginStartupActivity implements StartupActivity {
                                 if (parentTag != null) {
                                     String oldValue = psiTreeChangeEvent.getOldValue().toString();
                                     String newValue = psiTreeChangeEvent.getNewValue().toString();
-                                    String oldRelativePath = parentPath.replace(Global.PROJECT_PATH, "") + "/" + oldValue;
+                                    String projectPath = project.getBasePath().replace("\\", "/");
+                                    String oldRelativePath = parentPath.replace(projectPath, "") + "/" + oldValue;
                                     XmlTag currentTag = OperateXmlUtil.findXmlTagByPath(parentTag, oldRelativePath);
                                     if (currentTag != null) {
-                                        String newRelativePath = parentPath.replace(Global.PROJECT_PATH, "") + "/" + newValue;
+                                        String newRelativePath = parentPath.replace(projectPath, "") + "/" + newValue;
                                         PsiThreadUtil pt = new PsiThreadUtil(project, "update", currentTag, newRelativePath);
                                         Thread t1 = new Thread(pt);
                                         t1.start();

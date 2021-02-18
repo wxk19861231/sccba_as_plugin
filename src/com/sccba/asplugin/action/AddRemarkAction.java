@@ -58,7 +58,11 @@ public class AddRemarkAction extends AnAction {
                 XmlDocument xd = xf.getDocument();
                 if (xd != null && xd.getRootTag() != null) {
                     XmlTag parentTag = xd.getRootTag();
-                    String relativePath = path.replace(Global.PROJECT_PATH, "");
+                    Global.logger.info("path: " + path);
+                    String projectPath = project.getBasePath().replace("\\", "/");
+                    Global.logger.info("project path: " + projectPath);
+                    String relativePath = path.replace(projectPath, "");
+                    Global.logger.info("relative path:" + relativePath);
                     XmlTag currentTag = OperateXmlUtil.findXmlTagByPath(parentTag, relativePath);
                     if (currentTag != null) {
                         OperateXmlUtil.updateXmlTagForTitle(currentTag, title);
