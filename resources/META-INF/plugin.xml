@@ -16,8 +16,9 @@
 
     <change-notes><![CDATA[
       <ul>
-        <p>1.1.2</p>
-        <li> 1.修改Android Studio IDE多开添加备注信息不显示问题 </li>
+        <p>1.1.3</p>
+        <li> 1.修改编辑文件内容备注信息自动删除问题 </li>
+        <li> 2.修改批量进行文件夹或文件删除、移动、更名操作时不同步显示备注问题 </li>
       </ul>
     ]]></change-notes>
 
@@ -28,10 +29,6 @@
          on how to target different products -->
     <!-- <depends>com.intellij.modules.platform</depends>-->
     <depends>com.intellij.modules.java</depends>
-    <depends>org.intellij.groovy</depends>
-    <depends>com.intellij.properties</depends>
-    <depends>org.jetbrains.kotlin</depends>
-    <depends>org.jetbrains.android</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->

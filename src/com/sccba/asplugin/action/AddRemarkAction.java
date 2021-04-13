@@ -11,7 +11,6 @@ import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.xml.XmlDocument;
 import com.intellij.psi.xml.XmlFile;
 import com.intellij.psi.xml.XmlTag;
-import com.sccba.asplugin.model.Global;
 import com.sccba.asplugin.utils.OperateXmlUtil;
 
 public class AddRemarkAction extends AnAction {

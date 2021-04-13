@@ -22,7 +22,7 @@ IntelliJ IDEA or Android Studio -> Plugins -> sccba_as_plugin
 
 ### 手动安装
 
-[sccba_as_plugin-1.1.2.zip](https://raw.githubusercontent.com/wxk19861231/sccba_as_plugin/master/builds/sccba_as_plugin-1.1.2.zip)
+[sccba_as_plugin-1.1.3.zip](https://raw.githubusercontent.com/wxk19861231/sccba_as_plugin/master/builds/sccba_as_plugin-1.1.3.zip)
 
 ### 一、示列
 
